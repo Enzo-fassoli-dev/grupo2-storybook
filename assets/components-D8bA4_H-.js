@@ -78,12 +78,13 @@ function C(e,t,a){const o=e===t;return{label:`${e}/${t} itens`,complete:o,highli
       </dl>
       <div>${p}</div>
       <details><summary>Ver composição do custo</summary><p>Itens ${b(r.subtotal)} · Deslocamento ${r.trip===null?"não estimado":b(r.trip)}</p></details>
-    </li>`});return d("Comparação de planos","D1 e D3 · RF04, RF05, RF09, RF15","A lista repete custo total, cobertura e lojas. A cobertura indica quantos itens da lista estão no plano.",`<p class="kicker">Critério · Menor custo estimado total</p><ul class="reset stack" aria-label="Planos de compra">${s.join("")}</ul>`)}const L="2026-11-09T10:00:00-03:00",x="2026-11-09",k=e=>e?e.slice(0,10).split("-").reverse().join("/"):"",D=e=>e.slice(11,16),E={valid:["Validade","good"],soon:["Vence em breve","warn"],expired:["Oferta vencida","error"],unknown:["Validade não informada",""]};function T({expires:e,updated:t,origin:a}){const[o,s]=E[A(e,x)],r=R(t,L);return d("Oferta e procedência","D2 e D4 · RF03, RF10, RF11, RF13","Preço por unidade, validade do lote, atualização e origem têm rótulos próprios. A data de compra do exemplo é 09/11/2026.",`<article class="panel stack">
+    </li>`});return d("Comparação de planos","D1 e D3 · RF04, RF05, RF09, RF15","A lista repete custo total, cobertura e lojas. A cobertura indica quantos itens da lista estão no plano.",`<p class="kicker">Critério · Menor custo estimado total</p><ul class="reset stack" aria-label="Planos de compra">${s.join("")}</ul>`)}const L="2026-11-09T10:00:00-03:00",x="2026-11-09",k=e=>e?e.slice(0,10).split("-").reverse().join("/"):"",D=e=>{const t=Number(e.slice(11,13)),a=e.slice(14,16);return`${t}h${a==="00"?"":a}`},E={valid:["Validade","good"],soon:["Vence em breve","warn"],expired:["Oferta vencida","error"],unknown:["Validade não informada",""]};function T({expires:e,updated:t,origin:a}){const[o,s]=E[A(e,x)],r=R(t,L);return d("Oferta e procedência","D2 e D4 · RF03, RF10, RF11, RF13","Preço por unidade, validade do lote, atualização e origem têm rótulos próprios. A data de compra do exemplo é 09/11/2026.",`<article class="panel stack">
       <div class="tight"><p class="kicker">Mercado A · Encarte digital</p><h2>Arroz tipo 1 · 1 kg</h2>
       <p><strong class="amount">R$ 8,99</strong> <span class="muted">· R$ 8,99/kg</span></p></div>
       <div class="row">
         <span class="badge ${s}">${o}${e?" · "+f(k(e)):""}</span>
-        <span class="badge ${r?"warn":""}">${t?`${r?"Preço desatualizado":"Preço atualizado"} · ${f(k(t))} às ${f(D(t))}`:"Atualização não informada"}</span>
+        <span class="badge">${t?`Preço atualizado · ${f(k(t).slice(0,5))} às ${f(D(t))}`:"Atualização não informada"}</span>
+        ${r?'<span class="badge warn">Sem atualização há mais de 24 h</span>':""}
       </div>
       <p class="muted small">Preço válido para a embalagem de 1 kg na loja informada.</p>
       <details><summary>Ver origem e evidências</summary>

@@ -1,4 +1,4 @@
-import{f as a}from"./components-BC7yPZn6.js";const t={title:"Componentes/Estados de consulta",render:a},r={args:{state:"error"}},e={args:{state:"empty"}},s={args:{state:"loading"}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+import{f as a}from"./components-D8bA4_H-.js";const t={title:"Componentes/Estados de consulta",render:a},r={args:{state:"error"}},e={args:{state:"empty"}},s={args:{state:"loading"}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
   args: {
     state: 'error'
   }
